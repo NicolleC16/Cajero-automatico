@@ -1,55 +1,53 @@
-class CuentaBancaria:
+# Tarea de Veronica: Mensaje de bienvenida (AB#2)
+print("================================")
+print("Bienvenido al Cajero Automático")
+print("================================")
 
+class CuentaBancaria:
     def __init__(self, nombre, saldo):
         self.nombre = nombre
         self.saldo = saldo
 
     def mostrar_saldo(self):
-        print("Tu saldo es:", self.saldo)
+        print(f"Hola {self.nombre}, tu saldo es: ${self.saldo:.2f}")
 
     def consignar(self, valor):
         if valor > 0:
             self.saldo = self.saldo + valor
-            print("Consignación realizada.")
+            print(f"Consignación realizada con éxito. Nuevo saldo: ${self.saldo:.2f}")
         else:
-            print("Valor inválido.")
+            print("Error: El valor de la consignación debe ser mayor a 0.")
 
     def retirar(self, valor):
         if valor > self.saldo:
-            print("No tienes suficiente dinero.")
+            print("Error: No tienes suficiente dinero para este retiro.")
         elif valor <= 0:
-            print("Valor inválido.")
+            print("Error: Valor de retiro inválido.")
         else:
             self.saldo = self.saldo - valor
-            print("Retiro exitoso.")
-
+            print(f"Retiro exitoso. Nuevo saldo: ${self.saldo:.2f}")
 
 cuenta = CuentaBancaria("Nicolle", 3200000)
 
 while True:
-
-    print("\n CAJERO ")
+    print("\n--- MENÚ CAJERO ---")
     print("1. Ver saldo")
     print("2. Retirar")
     print("3. Consignar")
     print("4. Salir")
-
+    
     opcion = input("Elige una opción: ")
 
     if opcion == "1":
         cuenta.mostrar_saldo()
-
     elif opcion == "2":
         valor = float(input("¿Cuánto quieres retirar?: "))
         cuenta.retirar(valor)
-
     elif opcion == "3":
         valor = float(input("¿Cuánto quieres consignar?: "))
         cuenta.consignar(valor)
-
     elif opcion == "4":
-        print("Adiós")
+        print("Cerrando sesión...")
         break
-
     else:
-        print("Opción incorrecta")
+        print("Opción incorrecta, intenta de nuevo.")
