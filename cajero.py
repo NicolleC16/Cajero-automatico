@@ -3,6 +3,7 @@ print("================================")
 print("Bienvenido al Cajero Automático")
 print("================================")
 
+# Codigo base del cajero.
 class CuentaBancaria:
     def __init__(self, nombre, saldo):
         self.nombre = nombre
