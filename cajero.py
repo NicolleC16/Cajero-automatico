@@ -48,7 +48,10 @@ while True:
         valor = float(input("¿Cuánto quieres consignar?: "))
         cuenta.consignar(valor)
     elif opcion == "4":
-        print("Cerrando sesión...")
+        """
+        # Tarea de Daniel: Mensaje de despedida (AB#7)
+        """
+        print(f"Cerrando sesion, hasta luego {cuenta.nombre}")
         break
     else:
         print("Opción incorrecta, intenta de nuevo.")
