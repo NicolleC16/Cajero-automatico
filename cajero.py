@@ -1,7 +1,12 @@
-# Tarea de Veronica: Mensaje de bienvenida (AB#2)
-print("================================")
-print("Bienvenido al Cajero Automático")
-print("================================")
+# Tarea de Veronica: Mensaje de Bienvenida (AB#2)
+print("=╔══════════════════════════════════════╗")
+print("=║                                      ║")
+print("=║           BANCO DIGITAL S.A.         ║")
+print("=║                                      ║")
+print("=║       Cajero Automático v1.0         ║")
+print("=║    Tu dinero, siempre disponible     ║")
+print("=║                                      ║")
+print("=╚══════════════════════════════════════╝")
 
 # Codigo base del cajero.
 class CuentaBancaria:
@@ -48,7 +53,10 @@ while True:
         valor = float(input("¿Cuánto quieres consignar?: "))
         cuenta.consignar(valor)
     elif opcion == "4":
-        print("Cerrando sesión...")
+        """
+        # Tarea de Daniel: Mensaje de despedida (AB#7)
+        """
+        print(f"Cerrando sesion, hasta luego {cuenta.nombre}")
         break
     else:
         print("Opción incorrecta, intenta de nuevo.")
