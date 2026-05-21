@@ -1,7 +1,12 @@
 # Tarea de Veronica: Mensaje de bienvenida (AB#2)
-print("================================")
-print("Bienvenido al Cajero Automático")
-print("================================")
+print("╔══════════════════════════════════════╗")
+print("║                                      ║")
+print("║          BANCO DIGITAL S.A.          ║")
+print("║                                      ║")
+print("║       Cajero Automático v1.0         ║")
+print("║    Tu dinero, siempre disponible     ║")
+print("║                                      ║")
+print("╚══════════════════════════════════════╝")
 
 # Codigo base del cajero.
 class CuentaBancaria:
